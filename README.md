@@ -1,1 +1,1 @@
-# music-tutor
+# Music Tutor
