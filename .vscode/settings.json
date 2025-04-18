@@ -6,42 +6,44 @@
     "markdown": true
   },
   // 🐍 Python Environment
-  "python.defaultInterpreterPath": "venv/bin/python",
-  "python.terminal.activateEnvironment": true,
-  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "venv/bin/python", // Use the virtual environment
+  "python.terminal.activateEnvironment": true, // Automatically activate the virtual environment in the terminal
+  "python.analysis.typeCheckingMode": "basic", // Enable basic type checking
   // 🧪 Test Framework: pytest
-  "python.testing.pytestEnabled": true,
-  "python.testing.unittestEnabled": false,
-  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestEnabled": true, // Enable pytest
+  "python.testing.unittestEnabled": false, // Disable unittest
+  "python.testing.nosetestsEnabled": false, // Disable nosetests
   "python.testing.pytestArgs": [
-    "tests"
+    "tests" // Specify the tests directory for pytest
   ],
   // 🎨 Code Formatting: Black + isort
-  "python.formatting.provider": "black",
+  "python.formatting.provider": "black", // Use Black for formatting
   "python.formatting.blackArgs": [
     "--line-length",
-    "88"
+    "88" // Set line length to 88 for Black
   ],
   // 🧼 Linting
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true, // Enable linting
+  "python.linting.flake8Enabled": true, // Use flake8 for linting
   "python.linting.flake8Args": [
-    "--ignore=E203,W503"
+    "--ignore=E203,W503" // Ignore specific flake8 warnings
   ],
   // ✨ Editor Quality of Life
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "editor.tabSize": 4,
-  "editor.wordWrap": "on",
-  // 🧪 Testing Sidebar UX
-  "testing.automaticallyOpenPeekView": "never",
-  "testing.openTesting": "never",
-  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true, // Automatically trim trailing whitespace
+  "files.insertFinalNewline": true, // Ensure files end with a newline
+  "editor.tabSize": 4, // Use 4 spaces for indentation
+  "editor.wordWrap": "on", // Enable word wrapping
+  "editor.formatOnSave": true, // Format files on save
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "always" // Organize imports on save
   },
   "python.sortImports.args": [
     "--profile",
-    "black"
-  ]
+    "black" // Use Black-compatible isort profile
+  ],
+  "python.envFile": "${workspaceFolder}/.env", // Load environment variables from .env
+  // 🧪 Testing Sidebar UX
+  "testing.automaticallyOpenPeekView": "failureAnywhere", // Open Peek View on any test failure
+  "testing.openTesting": false, // Disable automatic opening of the Testing view
+  "testing.automaticallyOpenTestResults": false // Never automatically open test results
 }

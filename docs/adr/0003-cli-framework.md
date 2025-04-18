@@ -29,3 +29,6 @@ Use [Typer](https://typer.tiangolo.com/) to build the CLI interface.
 - Typer's support for subcommands allows for easy expansion of CLI functionality
 - Typer's type hinting and validation features will help catch errors early in the development process
 - Typer's integration with Click allows for easy customization and extension of the CLI
+
+## Workflow Reminder
+- Periodically run `git fetch` to ensure your local repository stays in sync with the remote repository. This is especially useful if changes are made directly on the remote (e.g., via GitHub) or if you plan to collaborate in the future.
